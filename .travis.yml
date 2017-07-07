@@ -1,16 +1,25 @@
-lenguage: php
-dist: xenial
- php:
-   -7.0
- env:
-  -80==pgsql
+language: php
+
+dist: xenial 
+
+php:
+- 7.0
+
+env:
+- BD=pgsql
+
 before_install:
- -sudo apt-get update -q
+- sudo apt-get update -q
+- sudo apt-get install apache2 -y
+
+
 before_script: true
 
-script:
-  - phpunit test.php
+script: 
+- phpunit Test.php
+
+
 notifications:
   email:
-  - darwin78@hotmail.com
-
+    - darwin78@hotmail.com
+  irc: "irc.freenode.org#yourfavouriteroomfortravis"
