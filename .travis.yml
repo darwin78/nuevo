@@ -1,0 +1,10 @@
+lenguage: php
+dist: xenial
+ php:
+   -"5.0"
+script:
+  - phpunit test.php
+notifications:
+  email:
+  - darwin78@hotmail.com
+
